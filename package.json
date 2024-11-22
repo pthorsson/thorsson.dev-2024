@@ -16,5 +16,9 @@
     "tslib": "^2.8.0",
     "typescript": "~5.6.2",
     "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.1.1",
+    "reset-css": "^5.0.2"
   }
 }
