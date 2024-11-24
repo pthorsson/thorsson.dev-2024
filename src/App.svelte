@@ -3,7 +3,8 @@
   import Link from 'lib/Link.svelte';
   import Logo from 'lib/Logo.svelte';
 
-  let showContent = $state(false);
+  let visibilityState = $state<'hidden' | 'entering' | 'visible'>('hidden');
+  let showContent = $derived(visibilityState !== 'hidden');
   let contentHeight = $state(0);
   let section: HTMLElement;
 
@@ -17,12 +18,17 @@
 <main style="--reveal-animation-duration: {revealAnimationDuration}ms">
   <Logo
     onAnimationComplete={() => {
-      showContent = true;
+      visibilityState = 'entering';
+
+      setTimeout(() => {
+        visibilityState = 'visible';
+      }, revealAnimationDuration);
     }}
   />
   <section
     bind:this={section}
-    class:show={showContent}
+    class:entering={visibilityState === 'entering'}
+    class:visible={visibilityState === 'visible'}
     style="--content-height: {contentHeight}px"
   >
     <h2 class:stagger-reveal={showContent} style="--stagger-delay: 500ms">
@@ -50,10 +56,15 @@
     height: 0px;
   }
 
-  section.show {
+  section.entering,
+  section.visible {
     opacity: 1;
     padding-top: 1.75rem;
     height: var(--content-height);
+  }
+
+  section.visible {
+    height: auto;
   }
 
   nav {
