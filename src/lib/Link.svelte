@@ -24,6 +24,7 @@
 
 <style>
   a {
+    display: inline-block;
     align-self: self-start;
     font-weight: 600;
     color: currentColor;
@@ -31,11 +32,13 @@
     font-size: 1.25rem;
     padding: 0.25em;
     margin-left: -0.25em;
+    transition: all 150ms;
   }
 
   .arrow {
     height: 1rem;
     margin-bottom: -0.05em;
+    transition: all 150ms;
   }
 
   .arrow * {
@@ -47,11 +50,15 @@
     transform: translateX(-0.25em);
   }
 
+  a:hover {
+    color: var(--color-fg-secondary);
+  }
+
   a:hover .arrow-head {
     transform: translateX(0em);
   }
 
   a:hover .arrow {
-    color: var(--color-fg-secondary);
+    transform: translateX(0.25em);
   }
 </style>

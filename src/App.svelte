@@ -7,7 +7,7 @@
   let contentHeight = $state(0);
   let section: HTMLElement;
 
-  const revealAnimationDuration = 1500;
+  const revealAnimationDuration = 1300;
 
   onMount(() => {
     contentHeight = section.scrollHeight;
@@ -25,10 +25,16 @@
     class:show={showContent}
     style="--content-height: {contentHeight}px"
   >
-    <h2>Freelance software developer based in Gothenburg, Sweden.</h2>
+    <h2 class:stagger-reveal={showContent} style="--stagger-delay: 500ms">
+      Freelance software developer based in Gothenburg, Sweden.
+    </h2>
     <nav>
-      <Link to="https://github.com/pthorsson">Github</Link>
-      <Link to="https://linkedin.com/in/pthorsson">LinkedIn</Link>
+      <div class:stagger-reveal={showContent} style="--stagger-delay: 600ms">
+        <Link to="https://github.com/pthorsson">Github</Link>
+      </div>
+      <div class:stagger-reveal={showContent} style="--stagger-delay: 700ms">
+        <Link to="https://linkedin.com/in/pthorsson">LinkedIn</Link>
+      </div>
     </nav>
   </section>
 </main>

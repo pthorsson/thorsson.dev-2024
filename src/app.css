@@ -77,25 +77,17 @@ h2 {
 }
 
 .stagger-reveal {
+  animation: staggerReveal 700ms var(--stagger-delay, 0ms) forwards;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s, transform 0.5s;
 }
 
-@keyframes stagger-reveal {
+@keyframes staggerReveal {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-2rem);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.stagger-reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s, transform 0.5s;
-  /* transition-delay: ; */
 }
