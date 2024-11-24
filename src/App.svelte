@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import Link from './lib/Link.svelte';
-  import Logo from './lib/Logo.svelte';
+  import Link from 'lib/Link.svelte';
+  import Logo from 'lib/Logo.svelte';
 
   let showContent = $state(false);
   let contentHeight = $state(0);

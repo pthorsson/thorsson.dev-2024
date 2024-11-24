@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { wait } from '../utils/wait';
+  import { wait } from 'utils/wait';
 
   interface Props {
     onAnimationComplete(): void;
