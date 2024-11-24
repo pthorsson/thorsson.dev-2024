@@ -16,8 +16,6 @@
     <g class="arrow-head">
       <path d="M16 6.375h16v2.25H16z" />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
         d="M31.79 7.5 25.5 1h3l5.095 5.306a1.75 1.75 0 0 1 0 2.388L28.5 14h-3l6.29-6.5Z"
       />
     </g>
