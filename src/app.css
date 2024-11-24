@@ -24,7 +24,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --color-bg-primary: #f5f5f5;
-    --color-fg-primary: #181818;
+    --color-fg-primary: #252525;
     --color-fg-secondary: #7085a1;
   }
 }
