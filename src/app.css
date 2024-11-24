@@ -29,6 +29,11 @@
   }
 }
 
+*::selection {
+  color: var(--color-bg-primary);
+  background: var(--color-fg-primary);
+}
+
 body {
   display: flex;
   place-items: center;
