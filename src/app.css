@@ -43,17 +43,26 @@ body {
   padding: 0 3rem;
 }
 
-.fg-secondary {
-  color: var(--color-fg-secondary);
+b {
+  font-weight: 600;
 }
 
 h1 {
   font-size: 5rem;
 }
 
+h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
 @media (max-width: 900px) {
   h1 {
     font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -61,4 +70,32 @@ h1 {
   h1 {
     font-size: 2rem;
   }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+.stagger-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+@keyframes stagger-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s, transform 0.5s;
+  /* transition-delay: ; */
 }
