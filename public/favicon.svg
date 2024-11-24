@@ -5,7 +5,7 @@
 
     @media (prefers-color-scheme: light) {
     .primary { fill: #181818; }
-    .secondary { fill: #273240; }
+    .secondary { fill: #7085A1; }
     }
   </style>
   <path class="primary"
