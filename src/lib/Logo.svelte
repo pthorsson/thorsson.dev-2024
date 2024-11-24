@@ -18,7 +18,7 @@
   ];
 
   onMount(async () => {
-    await wait(1500);
+    await wait(1900);
 
     for (let i = 0; i < letters.length; i++) {
       const curr = letters.at(i)?.letter || '';
