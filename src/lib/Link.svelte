@@ -12,9 +12,9 @@
 <a href={to} target="_blank">
   {@render children()}
   <svg fill="none" viewBox="0 0 35 15" class="arrow">
-    <path d="M1 6.25h19v2.5H1z" />
+    <path d="M1 6.375h19v2.25H1z" />
     <g class="arrow-head">
-      <path d="M16 6.25h16v2.5H16z" />
+      <path d="M16 6.375h16v2.25H16z" />
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
